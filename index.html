@@ -578,16 +578,16 @@
 var ap = new APlayer({
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
-    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
     showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
     mutex: true,                                                       // Optional, pause other players when this player playing
     theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
     mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
     preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
-    listmaxheight: '513px',                                             // Optional, max height of play list
+    listmaxheight: '51px',                                             // Optional, max height of play list
     music: {                                                           // Required, music info, see: ###With playlist
-        title: '你曾是少年',                                          // Required, music title
-        author: 'cover',                                              // Required, music author
+        title: 'ASlien',                                          // Required, music title
+        author: 'ASlien',                                              // Required, music author
         url: 'http://stream.p4.no/p5oslo_mp3_hq',                // Required, music url
         pic: '/images/visitor.jpg',                                   // Optional, music picture
     }
@@ -1123,5 +1123,32 @@ var ap = new APlayer({
 
   
 
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:true,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+    img_src:['https://t1.picb.cc/uploads/2019/02/18/VhsfTw.gif',
+				'https://t1.picb.cc/uploads/2019/02/18/VhzJAe.gif',
+				'https://t1.picb.cc/uploads/2019/02/18/VhzVBs.gif',
+				'https://t1.picb.cc/uploads/2019/02/18/Vhzt46.gif',
+				'https://t1.picb.cc/uploads/2019/02/18/VhzZbT.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
 </body>
 </html>
