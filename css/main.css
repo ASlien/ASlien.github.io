@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #242b3e;
+  background: #340e4a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3131,7 +3131,7 @@ pre .javascript .function {
   }
   .main-inner {
     background: #fff;
-    opacity: 0.9;
+    opacity: 0.8;
   }
   .posts-expand .post-title-link::before {
     background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
